@@ -12,7 +12,11 @@ Procfile file for Heroku app running:
 
 `web: python app.py`
 
-And set all the os environment keys on: Settings > configuration vars
+To wireup Flask and MongoDB:
+
+`pip3 install flask-pymongo`
+
+`pip3 install dnspython`
 
 Another blue button should appear to click: *Open Browser*.
 
