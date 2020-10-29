@@ -40,7 +40,7 @@
             <li><a href="#">New Recipe</a></li>
             <li><a href="#">Manage Recipes</a></li>
             <li><a href="#">Log Out</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
           </ul>
         </div>
@@ -52,12 +52,12 @@
                     Wonder<i class="fas fa-pepper-hot"></i> Menu
                 </h4>
             </li>
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
             <li><a href="#">New Recipe</a></li>
             <li><a href="#">Manage Recipes</a></li>
             <li><a href="#">Log Out</a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
       </ul>
     </header>
     <section>

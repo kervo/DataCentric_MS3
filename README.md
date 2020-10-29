@@ -6,6 +6,8 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 # UX Practices
 
+The fontawesone icons use in this application arefood related as this is a recipes database.
+
 In order to have a nice centred panel on *register.html* we need to use `<div class="col s12 m8 offset-m2">` where offset-m2 would push the card two spaces to the left.
 
 * Using fontawesone icons:

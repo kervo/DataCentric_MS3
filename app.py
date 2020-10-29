@@ -31,11 +31,11 @@ def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-# Check for existing users
+        # Check for existing users
         if existing_user:
             flash("Username already cooked")
             return redirect(url_for("register"))
-# New user
+        # New user
         register = {
             "username": request.form.get("username").lower(),
             "email": request.form.get("email").lower(),
@@ -48,6 +48,11 @@ def register():
         flash("Registration in the oven!")
         return redirect(url_for("get_recipes", username=session["user"]))
     return render_template("register.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
