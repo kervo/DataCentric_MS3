@@ -33,7 +33,7 @@ def register():
             {"username": request.form.get("username").lower()})
 # Check for existing users
         if existing_user:
-            flash("Username already taken")
+            flash("Username already cooked")
             return redirect(url_for("register"))
 # New user
         register = {
@@ -45,7 +45,7 @@ def register():
 
         # Starts Session
         session["user"] = request.form.get("username").lower()
-        flash("Registration sucessfull")
+        flash("Registration in the oven!")
         return redirect(url_for("get_recipes", username=session["user"]))
     return render_template("register.html")
 

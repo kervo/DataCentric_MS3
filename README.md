@@ -19,13 +19,17 @@ Index
 ```
 |—Log in
 ---| <user> <session>
-|—Sign up
-  |——-Dashboard
-  |—Search recipes <recipe>
-  |—Add Recipe
-  |—Edit a recipe
-  |—Delete a recipe
-  |—Log out <session>
+---| Dashboard
+        |—Search recipes <recipe>
+        |—Add Recipe
+        |—Edit a recipe
+        |—Delete a recipe
+        |—Log out <session>
+
+|— register
+    <username>, <email>, <password>
+
+
 
 |—Index with random recipes <random>
 ```
@@ -48,7 +52,17 @@ In order to add a nice margin around the content, on the base.html file is impor
 ## Testing
 ### "password": generate_password_hash(request.form.get("password"))
 * Problem: TypeError: a bytes-like object is required, not 'NoneType'.
-* Solution: password input field wasn't correctly marked on the `type="password"`
+* Solution: password input field wasn't correctly marked as `type="password"` and it wasn't marked as required which causes error with the Werkzeug package.
+
+### jinja2.exceptions.UndefinedError: 'get_flasehd_messages' is undefined
+* Solution: typo
+
+### Defensive coding
+```
+<input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
+```
+This piece of code shows that minimum characters are five, maximum 20 and the alpha numberic only. Any exception will be flashed.
+
 
 ## Deployment on the command line
 

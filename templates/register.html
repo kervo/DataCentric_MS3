@@ -12,7 +12,7 @@
           <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-cheese prefix"></i>
-              <input id="username" name="username" type="text" class="validate" required>
+              <input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
               <label for="username">Username</label>
             </div>
         </div>
@@ -20,7 +20,7 @@
           <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-envelope prefix"></i>
-              <input id="email" name="email" type="email" class="validate"/>
+              <input id="email" name="email" type="email" class="validate" required>
               <label for="email">email</label>
             </div>
         </div>
@@ -28,7 +28,8 @@
            <div class="row">
             <div class="input-field col s12">
             <i class="fas fa-key prefix"></i>
-                 <input id="password" name="password" type="password" class="form-control validate" required>
+            <!-- Pattern added to allert problems with password  -->
+                 <input id="password" name="password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
                 <label for="password">Password</label>
             </div>
             </div>
