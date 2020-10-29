@@ -4,6 +4,11 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 # WonderCook Data Centric Milestone 3 Project
 
+## Coding Structure
+
+In order to create folders properly on our repository is important to create the folders on the command line:
+`mkdir templates`
+
 ## Deployment on the command line
 
 `pip3 freeze --local > requirements.txt`
