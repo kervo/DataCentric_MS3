@@ -4,7 +4,23 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 # WonderCook Data Centric Milestone 3 Project
 
-## Coding Structure
+# Software Development Practices:
+
+* The Structure
+Index
+```
+|—Log in
+---| <user> <session>
+|—Sign up
+  |——-Dashboard
+  |—Search recipes <recipe>
+  |—Add Recipe
+  |—Edit a recipe
+  |—Delete a recipe
+  |—Log out <session>
+
+|—Index with random recipes <random>
+```
 
 To create the folders on the command line:
 `mkdir templates`
@@ -13,6 +29,13 @@ For this project we used MATERIALIZE:
 
 https://materializecss.com/getting-started.html
 
+In order to add a nice margin around the content, on the base.html file is important to have this structure:
+```
+<div class="container">
+      {% block content %}
+      {% endblock %}
+</div>
+```
 ## Deployment on the command line
 
 `pip3 freeze --local > requirements.txt`

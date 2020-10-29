@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Test</h2>
+<div class="row">
+    <div class="col s12">
+
+    <h2>Test</h2>
     {% for recipes in recipes %}
         {{ recipes.recipe_name }}<br>
         {{ recipes.meal }}<br>
@@ -9,5 +12,6 @@
         {{ recipes.country }}<br>
         {{ recipes.vegetarian }}<br>
     {% endfor %}
-
+    </div>
+</div>
 {% endblock %}
