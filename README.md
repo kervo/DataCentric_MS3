@@ -6,8 +6,12 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 ## Coding Structure
 
-In order to create folders properly on our repository is important to create the folders on the command line:
+To create the folders on the command line:
 `mkdir templates`
+
+For this project we used MATERIALIZE:
+
+https://materializecss.com/getting-started.html
 
 ## Deployment on the command line
 
