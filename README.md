@@ -4,9 +4,17 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 # WonderCook Data Centric Milestone 3 Project
 
+# UX Practices
+
+In order to have a nice centred panel on *register.html* we need to use `<div class="col s12 m8 offset-m2">` where offset-m2 would push the card two spaces to the left.
+
+* Using fontawesone icons:
+`<i class="fas fa-key prefix"></i>` PREFIX class allows the fontawesone icon to be displayed as part of the text.
+
 # Software Development Practices:
 
 * The Structure
+
 Index
 ```
 |—Log in
