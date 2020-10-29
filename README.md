@@ -47,7 +47,8 @@ In order to add a nice margin around the content, on the base.html file is impor
 
 ## Testing
 ### "password": generate_password_hash(request.form.get("password"))
-* problem: TypeError: a bytes-like object is required, not 'NoneType'
+* Problem: TypeError: a bytes-like object is required, not 'NoneType'.
+* Solution: password input field wasn't correctly marked on the `type="password"`
 
 ## Deployment on the command line
 
