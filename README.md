@@ -44,6 +44,11 @@ In order to add a nice margin around the content, on the base.html file is impor
       {% endblock %}
 </div>
 ```
+
+## Testing
+### "password": generate_password_hash(request.form.get("password"))
+* problem: TypeError: a bytes-like object is required, not 'NoneType'
+
 ## Deployment on the command line
 
 `pip3 freeze --local > requirements.txt`
