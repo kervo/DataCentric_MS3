@@ -46,7 +46,7 @@ def register():
         # Starts Session
         session["user"] = request.form.get("username").lower()
         flash("Registration in the oven!")
-        return redirect(url_for("get_recipes", username=session["user"]))
+        return redirect(url_for("dashboard", username=session["user"]))
     return render_template("register.html")
 
 
@@ -62,6 +62,8 @@ def login():
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Hey, {}!".format(request.form.get("username")))
+                    return redirect(url_for(
+                        "dashboard", username=session["user"]))
             else:
                 # invalid information
                 flash("Wrong Ingredients")
@@ -74,6 +76,12 @@ def login():
 
     return render_template('login.html')
 
+
+@app.route("/dashboard/<username>", methods=['GET', 'POST'])
+def dashboard(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("dashboard.html", username=username)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
