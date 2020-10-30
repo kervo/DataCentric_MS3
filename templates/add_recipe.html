@@ -1,20 +1,72 @@
-{% extends "base.html" %} 
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="row">
-    <h3 class="dark-pink-text">WonderRecipe</h3>
-  <form class="col s12">
+  <h3 class="pink-text center-align text-darken-4">WonderRecipe</h3>
+  <form class="col s12" method="POST" action="">
     <div class="row">
       <div class="input-field col s12">
-        <i class="fas fa-burn prefix"></i>
-        <input id="recipe_name" type="text" class="validate" />
+        <i class="fas fa-burn pink-text text-darken-4 prefix"></i>
+        <input
+          id="recipe_name"
+          name="recipe_name"
+          type="text"
+          class="validate"
+          required
+        />
         <label for="recipe_name">Dish Name</label>
       </div>
+    </div>
+    <div class="row">
       <div class="input-field col s12">
-        <i class="fas fa-flag prefix"></i>
-        <input id="country" type="text" class="validate" />
+        <i class="fas fa-flag pink-text text-darken-4 prefix"></i>
+        <input
+          id="country"
+          name="country"
+          type="text"
+          class="validate"
+          required
+        />
         <label for="country">Country</label>
       </div>
     </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-fire pink-text text-darken-4 prefix"></i>
+        <textarea
+          id="preparation"
+          name="preparation"
+          minlength="10"
+          maxlength="550"
+          class="materialize-textarea validate"
+          required
+        ></textarea>
+        <label for="preparation">Wonder Steps</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <div class="switch">
+          <i class="fas fa-leaf pink-text text-darken-4"></i>
+          <label for="vegetarian">
+            <input type="checkbox" id="vegetarian" name="vegetarian" />
+            <span class="lever"></span>
+            Vegetarian/Vegan
+          </label>
+        </div>
+      </div>
+    </div>
+    
+      <select>
+        <optgroup label="team 1">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+        </optgroup>
+        <optgroup label="team 2">
+          <option value="3">Option 3</option>
+          <option value="4">Option 4</option>
+        </optgroup>
+      </select>
+      <label>Optgroups</label>
+    
   </form>
 </div>
 {% endblock %}

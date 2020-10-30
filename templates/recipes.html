@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<br>
+<section class="home-background">
     <ul class="collapsible popout">
     {% for recipes in recipes %}
         <li>
@@ -17,5 +17,6 @@
             </div>
         </li>
     </ul>
+</section>
 {% endfor %}
 {% endblock %}
