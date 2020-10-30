@@ -45,11 +45,10 @@ For this project we used MATERIALIZE: https://materializecss.com/getting-started
 
 In order to add a nice margin around the content, on the base.html file is important to have this structure:
 
-```
 ```<div class="container">
-```      {% block content %}
-```      {% endblock %}
-```</div>
+      {% block content %}
+      {% endblock %}
+</div>
 ```
 
 ## Testing
@@ -61,9 +60,9 @@ In order to add a nice margin around the content, on the base.html file is impor
 * Solution: typo
 
 ### Defensive coding
-```
-```<input id="username" name="username" type="text" minlength="5" ```maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
-```
+
+```<input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>```
+
 This piece of code shows that minimum characters are five, maximum 20 and the alpha numberic only. Any exception will be flashed.
 
 ### 127.0.0.1 - - [30/Oct/2020 08:00:55] "GET /login HTTP/1.1" 200 - 127.0.0.1 - - [30/Oct/2020 08:01:14] "POST /register HTTP/1.1" 302 -
