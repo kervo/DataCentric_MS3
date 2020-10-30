@@ -2,27 +2,19 @@
 
 {% block content %}
 <br>
-{% for recipes in recipes %}
-            <br>
-            <br>
-            <br>
-
     <ul class="collapsible popout">
+    {% for recipes in recipes %}
         <li>
-            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>{{ recipes.recipe_name }}</div>
-            <div class="collapsible-body"><span>Meal: {{ recipes.meal }}</span>
+            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>{{ recipes.recipe_name }}
+            </div>
+            <div class="collapsible-body"><strong>Meal: {{ recipes.meal }}</strong>
             <p>Country: {{ recipes.country }}</p>
             <p>Preparation: {{ recipes.preparation }}</p>
-            <p>Is this vegetarian/vegan? {{ recipes.vegetarian }}</p>
+            {% if recipes.vegetarian == "yes" %}
+            <h5><i class="fas fa-leaf tooltipped"
+            data-position="top" data-tooltip="I'm Vegetarian"></i></h5>
+            {% endif %}
             </div>
-        </li>
-        <li>
-            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>Name</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>Name</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
         </li>
     </ul>
 {% endfor %}
