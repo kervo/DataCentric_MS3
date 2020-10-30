@@ -15,3 +15,7 @@ body {
     background-attachment: scroll;
     background-size: cover;
 }
+
+.brandlogo {
+    padding-left: 2%;
+}

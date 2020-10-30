@@ -87,12 +87,11 @@ To wireup Flask and MongoDB:
 
 `pip3 install dnspython`
 
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
 
 # References
 
 ## Gitpod
 
 * Beautify indentation: https://community.gitpod.io/t/indentation-with-alt-shift-f/1030
+
+* Materialize Styling: https://materializecss.com/
