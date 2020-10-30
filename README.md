@@ -8,6 +8,8 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 The fontawesone icons use in this application are food related as this is a recipes database.
 
+To make it easier for users to log into their profile's section, email has been removed from the credentials.
+
 In order to have a nice centred panel on *register.html* we need to use `<div class="col s12 m8 offset-m2">` where offset-m2 would push the card two spaces to the left.
 
 * Using fontawesone icons:
@@ -39,11 +41,10 @@ Index
 To create the folders on the command line:
 `mkdir templates`
 
-For this project we used MATERIALIZE:
-
-https://materializecss.com/getting-started.html
+For this project we used MATERIALIZE: https://materializecss.com/getting-started.html
 
 In order to add a nice margin around the content, on the base.html file is important to have this structure:
+
 ```
 <div class="container">
       {% block content %}
@@ -67,6 +68,9 @@ This piece of code shows that minimum characters are five, maximum 20 and the al
 
 ### 127.0.0.1 - - [30/Oct/2020 08:00:55] "GET /login HTTP/1.1" 200 - 127.0.0.1 - - [30/Oct/2020 08:01:14] "POST /register HTTP/1.1" 302 -
 I was getting redirected to the login page with its flash messages, my Log in page was taken action to POST on the register function rather that the login function.
+
+### pymongo.errors.InvalidOperation: cannot set options after executing query
+Calling information `{{ recipes.recipe_name }}` from the data base added on a template after the `{% endfor %}`
 
 ## Deployment on the command line
 

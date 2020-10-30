@@ -81,7 +81,21 @@ def login():
 def dashboard(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("dashboard.html", username=username)
+
+    # Retrieves user's profile
+    if session["user"]:
+        return render_template("dashboard.html", username=username)
+
+    return render_template('login.html')
+
+
+@app.route("/logout")
+def logout():
+    # Session.pop removes user's cookie info
+    flash("See you soon!")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

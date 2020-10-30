@@ -1,17 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col s12">
+<br>
+{% for recipes in recipes %}
+            <br>
+            <br>
+            <br>
 
-    <h2>Test</h2>
-    {% for recipes in recipes %}
-        {{ recipes.recipe_name }}<br>
-        {{ recipes.meal }}<br>
-        {{ recipes.preparation }}<br>
-        {{ recipes.country }}<br>
-        {{ recipes.vegetarian }}<br>
-    {% endfor %}
-    </div>
-</div>
+    <ul class="collapsible popout">
+        <li>
+            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>{{ recipes.recipe_name }}</div>
+            <div class="collapsible-body"><span>Meal: {{ recipes.meal }}</span>
+            <p>Country: {{ recipes.country }}</p>
+            <p>Preparation: {{ recipes.preparation }}</p>
+            <p>Is this vegetarian/vegan? {{ recipes.vegetarian }}</p>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>Name</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>Name</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
+{% endfor %}
 {% endblock %}
