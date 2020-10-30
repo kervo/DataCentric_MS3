@@ -27,7 +27,7 @@
     />
     <title>WonderCook</title>
   </head>
-  <body class="home-background">
+  <body>
     <header>
       <!-- Navbar for full screen version -->
       <nav class="nav-extended pink darken-4">
@@ -60,6 +60,7 @@
             <li><a href="{{ url_for('register') }}">Register</a></li>
       </ul>
     </header>
+    <div class="home-background">
     <section>
     <!--  Flash Messages  -->
     {% with messages = get_flashed_messages() %}
@@ -80,8 +81,12 @@
       {% block content %}
       {% endblock %}
     </div>
+
+    </div>
     <footer>
-    
+    <h6>
+       test
+    </h6>
     </footer>
     <!-- Compiled Jquery -->
     <script
