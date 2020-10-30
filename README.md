@@ -6,7 +6,7 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 # UX Practices
 
-The fontawesone icons use in this application arefood related as this is a recipes database.
+The fontawesone icons use in this application are food related as this is a recipes database.
 
 In order to have a nice centred panel on *register.html* we need to use `<div class="col s12 m8 offset-m2">` where offset-m2 would push the card two spaces to the left.
 
@@ -65,6 +65,8 @@ In order to add a nice margin around the content, on the base.html file is impor
 ```
 This piece of code shows that minimum characters are five, maximum 20 and the alpha numberic only. Any exception will be flashed.
 
+### 127.0.0.1 - - [30/Oct/2020 08:00:55] "GET /login HTTP/1.1" 200 - 127.0.0.1 - - [30/Oct/2020 08:01:14] "POST /register HTTP/1.1" 302 -
+I was getting redirected to the login page with its flash messages, my Log in page was taken action to POST on the register function rather that the login function.
 
 ## Deployment on the command line
 

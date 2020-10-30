@@ -50,9 +50,29 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    return render_template("login.html")
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # Check if information matches
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Hey, {}!".format(request.form.get("username")))
+            else:
+                # invalid information
+                flash("Wrong Ingredients")
+                return redirect(url_for("login"))
+
+        else:
+            # User doesn't exists
+            flash("No Registered Chef")
+            return redirect(url_for("login"))
+
+    return render_template('login.html')
 
 
 if __name__ == "__main__":
