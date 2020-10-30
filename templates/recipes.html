@@ -9,8 +9,9 @@
             <div class="collapsible-body"><strong>Meal: {{ recipes.meal }}</strong>
             <p>Country: {{ recipes.country }}</p>
             <p>Preparation: {{ recipes.preparation }}</p>
+            {{ recipes.ingredients }}
             {% if recipes.vegetarian == "yes" %}
-            <h5><i class="fas fa-leaf tooltipped"
+            <h5><i class="fas fa-leaf pink-text text-darken-4 tooltipped"
             data-position="top" data-tooltip="I'm Vegetarian"></i></h5>
             {% endif %}
             </div>

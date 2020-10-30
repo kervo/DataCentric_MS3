@@ -6,6 +6,8 @@ Deployed project: https://wondercook-book.herokuapp.com/
 
 # UX Practices
 
+My colour scheme for Materialize: pink-text text-darken-4
+
 The fontawesone icons use in this application are food related as this is a recipes database.
 
 To make it easier for users to log into their profile's section, email has been removed from the credentials.
