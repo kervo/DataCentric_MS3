@@ -99,7 +99,7 @@ def logout():
 
 @app.route("/add_recipe")
 def add_recipe():
-    meal = list(mongo.db.dish_type.find().sort("meal_time", 1))
+    meal = mongo.db.dish_type.find().sort("meal_time", 1)
     return render_template('add_recipe.html', meal=meal)
 
 
