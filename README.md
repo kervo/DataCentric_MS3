@@ -90,6 +90,9 @@ To wireup Flask and MongoDB:
 
 # References
 
+## Images
+All images taken from PEXELS https://www.pexels.com/
+
 ## Gitpod
 
 * Beautify indentation: https://community.gitpod.io/t/indentation-with-alt-shift-f/1030
