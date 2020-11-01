@@ -11,7 +11,7 @@
         <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text" class="validate" required> <label for="recipe_name">{{ recipe.recipe_name }}</label>
       </div>
       
-    <!--     Meal Type Categories      -->
+    <!--     Meal Type Categories      
       <div class="input-field col s12 m4">
       <i class="fas fa-pizza-slice pink-text text-darken-4 prefix"></i>
       <select id="dish_type" name="dish_type" class="validate" required>
@@ -21,7 +21,7 @@
           {% endfor %}
         </select>
         <label for="dish_type">Meal of the day</label>
-      </div>
+      </div>-->
     </div>
     <div class="row">
     <!--   Country     -->
@@ -76,7 +76,7 @@
         <div class="col s12 center-align">
             <a href="{{ url_for('get_recipes') }}" class="btn-large lime accent-2 black-text"><i class="fas fa-times-circle"></i> Cancel</a>
             <button type="submit" class="btn-large pink darken-4 white-text">
-                Edit recipe <i class="fas fa-check"></i>
+                WonderSave <i class="fas fa-check"></i>
             </button>
         </div>
     </div>

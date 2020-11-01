@@ -78,10 +78,13 @@ Correction:
 ```html
 <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}
 ```
+### Problem: raise ValueError('update only works with $ operators')
+* Solution: `.update()` for mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, edit_recipe)
 
-### Defensive coding
+### Defensive for 404
 
-```<input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>```
+```html
+<input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>```
 
 This piece of code shows that minimum characters are five, maximum 20 and the alpha numberic only. Any exception will be flashed.
 
