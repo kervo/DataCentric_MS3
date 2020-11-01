@@ -121,8 +121,8 @@ def add_recipe():
         flash("Wonderful! Recipe added to you book")
         return redirect(url_for("get_recipes"))
 
-    meal_time = mongo.db.dish_type.find({}, {'_id': False})
-    meal = meal_time[0]
+    meal_time = mongo.db.dish_type.find({}, {"meal_time"})
+    meal = list(meal_time)
     return render_template('add_recipe.html', meal=meal)
 
 

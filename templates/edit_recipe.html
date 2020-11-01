@@ -8,15 +8,14 @@
 <!--  Recipe Name      -->
       <div class="input-field col s12 m8">
         <i class="fas fa-burn pink-text text-darken-4 prefix"></i>
-        <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
-        <label for="recipe_name">Dish Name</label>
+        <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text" class="validate" required> <label for="recipe_name">{{ recipe.recipe_name }}</label>
       </div>
       
     <!--     Meal Type Categories      -->
       <div class="input-field col s12 m4">
       <i class="fas fa-pizza-slice pink-text text-darken-4 prefix"></i>
       <select id="dish_type" name="dish_type" class="validate" required>
-          <option value="" disabled selected>What kind on meal is this?</option>
+          <option value="" selected>What kind on meal is this?</option>
           {% for meal in meal %}
             <option value="{{ meal }}">{{ meal }}</option>
           {% endfor %}
@@ -28,7 +27,7 @@
     <!--   Country     -->
       <div class="input-field col s12">
         <i class="fas fa-flag pink-text text-darken-4 prefix"></i>
-        <input id="country" name="country" type="text" class="validate" required>
+        <input id="country" name="country" type="text" value="{{ recipe.country }}" class="validate" required>
         <label for="country">Country</label>
       </div>
     </div>
@@ -36,14 +35,13 @@
     <!--   Ingredients     -->
       <div class="input-field col s12 m6">
         <i class="fas fa-pepper-hot pink-text text-darken-4 prefix"></i>
-        <textarea id="ingredients" name="ingredients" minlength="10" maxlength="550" class="materialize-textarea validate" required>
-        </textarea>
+        <textarea id="ingredients" name="ingredients" value="{{- recipe.ingredients -}}" minlength="10" maxlength="550" class="materialize-textarea validate" required></textarea>
         <label for="ingredients">Ingredients</label>
       </div>
       <!--   Preparation     -->
       <div class="input-field col s12 m6">
         <i class="fas fa-fire pink-text text-darken-4 prefix"></i>
-        <textarea id="preparation" name="preparation" minlength="10" maxlength="550" class="materialize-textarea validate" required>
+        <textarea id="preparation" name="preparation" value="{{- recipe.preparation -}}" minlength="10" maxlength="550" class="materialize-textarea validate" required>
         </textarea>
         <label for="preparation">Steps</label>
       </div>
@@ -63,7 +61,11 @@
         <div class="switch">
           <i class="fas fa-leaf pink-text text-darken-4"></i>
           <label for="vegetarian">
-            <input type="checkbox" id="vegetarian" name="vegetarian" />
+            {% if recipe.vegetarian == "yes" %}
+            <input type="checkbox" id="vegetarian" name="vegetarian" checked>
+            {% else %}
+            <input type="checkbox" id="vegetarian" name="vegetarian">
+            {% endif %}
             <span class="lever"></span>
             Vegetarian/Vegan
           </label>
@@ -72,6 +74,7 @@
     </div>
     <div class="row">
         <div class="col s12 center-align">
+            <a href="{{ url_for('get_recipes') }}" class="btn-large lime accent-2 black-text"><i class="fas fa-times-circle"></i> Cancel</a>
             <button type="submit" class="btn-large pink darken-4 white-text">
                 Edit recipe <i class="fas fa-check"></i>
             </button>
