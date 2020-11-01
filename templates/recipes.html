@@ -16,13 +16,15 @@
                 <h5><i class="fas fa-leaf pink-text text-darken-4 tooltipped"
                 data-position="top" data-tooltip="I'm Vegetarian"></i></h5>
                 {% endif %}
-                <a href="" class="btn-small lime accent-2 black-text">
-                    <i class="fas fa-book-dead"></i> Kill this recipe
-                </a>
-                <!---  recipe_id  link with the recipes collection and its _id  -->
-                <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}" class="btn-small pink darken-2">
-                    <i class="fas fa-utensil-spoon"></i> Update
-                </a>
+                {% if session.user|lower == recipes.wonderchef|lower %}
+                    <a href="" class="btn-small lime accent-2 black-text">
+                        <i class="fas fa-book-dead"></i> Kill this recipe
+                    </a>
+                    <!---  recipe_id  link with the recipes collection and its _id  -->
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}" class="btn-small pink darken-2">
+                        <i class="fas fa-utensil-spoon"></i> Update
+                    </a>
+                {% endif %}
             </div>
             
         </li>
