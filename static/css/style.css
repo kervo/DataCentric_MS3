@@ -19,3 +19,7 @@ body {
 .brandlogo {
     padding-left: 2%;
 }
+
+.li {
+    text-decoration: none;
+}

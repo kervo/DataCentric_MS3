@@ -47,7 +47,8 @@ For this project we used MATERIALIZE: https://materializecss.com/getting-started
 
 In order to add a nice margin around the content, on the base.html file is important to have this structure:
 
-```<div class="container">
+```python
+<div class="container">
       {% block content %}
       {% endblock %}
 </div>
@@ -72,6 +73,9 @@ I was getting redirected to the login page with its flash messages, my Log in pa
 
 ### pymongo.errors.InvalidOperation: cannot set options after executing query
 Calling information `{{ recipes.recipe_name }}` from the data base added on a template after the `{% endfor %}`
+
+### IndexError: no such item for Cursor instance
+Problem to call values from array into `<select>` list on my add_recipe function.
 
 ## Deployment on the command line
 
