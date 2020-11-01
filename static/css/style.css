@@ -20,6 +20,10 @@ body {
     padding-left: 2%;
 }
 
-.li {
+li {
     text-decoration: none;
+}
+
+footer {
+    background: black;
 }

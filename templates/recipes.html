@@ -13,10 +13,10 @@
             {% if recipes.vegetarian == "yes" %}
             <h5><i class="fas fa-leaf pink-text text-darken-4 tooltipped"
             data-position="top" data-tooltip="I'm Vegetarian"></i></h5>
+            {% endif %}
             </div>
         </li>
-        {% endif %}
+        {% endfor %}
     </ul>
 </section>
-{% endfor %}
 {% endblock %}
