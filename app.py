@@ -49,10 +49,12 @@ def register():
         return redirect(url_for("dashboard", username=session["user"]))
     return render_template("register.html")
 
-# Not Session found 
-@app.errorhandler(404) 
+
+# Not Session found
+@app.errorhandler(404)
 def not_found(e):
-  return render_template("404.html") 
+    return render_template("404.html")
+
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -119,7 +121,8 @@ def add_recipe():
         flash("Wonderful! Recipe added to you book")
         return redirect(url_for("get_recipes"))
 
-    meal = mongo.db.dish_type.find().sort("meal_time", 1)
+    meal_time = mongo.db.dish_type.find({}, {'_id': False})
+    meal = meal_time[0]
     return render_template('add_recipe.html', meal=meal)
 
 

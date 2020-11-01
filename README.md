@@ -108,3 +108,7 @@ All images taken from PEXELS https://www.pexels.com/
 * Beautify indentation: https://community.gitpod.io/t/indentation-with-alt-shift-f/1030
 
 * Materialize Styling: https://materializecss.com/
+
+
+## Pymongo
+* https://stackoverflow.com/questions/12345387/removing-id-element-from-pymongo-results
