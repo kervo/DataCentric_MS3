@@ -8,7 +8,7 @@
             </div>
             <div class="collapsible-body orange lighten-5">
                 
-                <strong>Meal: {{ recipes.meal }}</strong>
+                <!-- <strong>Meal: {{ recipes.meal }}</strong> -->
                 <p>Country: {{ recipes.country }}</p>
                 <p>Preparation: {{ recipes.preparation }}</p>
                 <p><em>by: {{ recipes.wonderchef }}</em></p>
@@ -17,7 +17,7 @@
                 data-position="top" data-tooltip="I'm Vegetarian"></i></h5>
                 {% endif %}
                 {% if session.user|lower == recipes.wonderchef|lower %}
-                    <a href="" class="btn-small lime accent-2 black-text">
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipes._id) }}" class="btn-small lime accent-2 black-text">
                         <i class="fas fa-book-dead"></i> Kill this recipe
                     </a>
                     <!---  recipe_id  link with the recipes collection and its _id  -->
