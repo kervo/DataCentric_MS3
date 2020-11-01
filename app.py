@@ -49,6 +49,10 @@ def register():
         return redirect(url_for("dashboard", username=session["user"]))
     return render_template("register.html")
 
+# Not Session found 
+@app.errorhandler(404) 
+def not_found(e):
+  return render_template("404.html") 
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -86,7 +90,8 @@ def dashboard(username):
     if session["user"]:
         return render_template("dashboard.html", username=username)
 
-    return render_template('login.html')
+    if not session["user"]:
+        return render_template('login.html')
 
 
 @app.route("/logout")

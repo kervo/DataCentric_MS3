@@ -53,13 +53,19 @@ In order to add a nice margin around the content, on the base.html file is impor
       {% endblock %}
 </div>
 ```
+* The Categories
+The main problem at the moment is displaying the meal type on from the select list. I have it in MongoDB as an array, I think the best is to have them as different entries in a collection so the can have the same key value of "meal_time".
+
+### Handling errors
+Loading the page for the first time and click on the *ME* link without starting a session was throwing a 404 error, the best practice is to ask the users to log in.
 
 ## Testing
-### "password": generate_password_hash(request.form.get("password"))
-* Problem: TypeError: a bytes-like object is required, not 'NoneType'.
-* Solution: password input field wasn't correctly marked as `type="password"` and it wasn't marked as required which causes error with the Werkzeug package.
 
-### jinja2.exceptions.UndefinedError: 'get_flasehd_messages' is undefined
+### Problem: "password": generate_password_hash(request.form.get("password"))
+* Message: TypeError: a bytes-like object is required, not 'NoneType'.
+* Solution: password input field wasn't correctly marked as `type="password"` and it wasn't marked as required field which causes error with the Werkzeug package.
+
+### Problem: jinja2.exceptions.UndefinedError: 'get_flasehd_messages' is undefined
 * Solution: typo
 
 ### Defensive coding
