@@ -58,6 +58,9 @@ The main problem at the moment is displaying the meal type on from the select li
 
 ### Handling errors
 Loading the page for the first time and click on the *ME* link without starting a session was throwing a 404 error, the best practice is to ask the users to log in.
+```html
+{% if session.user|lower == recipes.wonderchef|lower %}
+```
 
 ## Testing
 
@@ -81,15 +84,29 @@ Correction:
 ### Problem: raise ValueError('update only works with $ operators')
 * Solution: `.update()` for mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, edit_recipe)
 
-### Defensive for 404
+# Defensive Design 
+### Denied access to functions and links if is not a user:
+```html
+{% if session.user|lower == recipes.wonderchef|lower %}
+```
+This codes will allow to use certain functions and links when users log in.
+
+### 404 Errors
+```python
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html")
+```
+This piece of code simply redirects to the logic page for any 404 errors that may occur on a user's session.
 
 ```html
-<input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>```
+<input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
+```
 
 This piece of code shows that minimum characters are five, maximum 20 and the alpha numberic only. Any exception will be flashed.
 
-### 127.0.0.1 - - [30/Oct/2020 08:00:55] "GET /login HTTP/1.1" 200 - 127.0.0.1 - - [30/Oct/2020 08:01:14] "POST /register HTTP/1.1" 302 -
-I was getting redirected to the login page with its flash messages, my Log in page was taken action to POST on the register function rather that the login function.
+### Problem: 127.0.0.1 - - [30/Oct/2020 08:00:55] "GET /login HTTP/1.1" 200 - 127.0.0.1 - - [30/Oct/2020 08:01:14] "POST /register HTTP/1.1" 302 -
+* Solution: I was getting redirected to the login page with its flash messages, my Log in page was taken action to POST on the register function rather that the login function.
 
 ### pymongo.errors.InvalidOperation: cannot set options after executing query
 Calling information `{{ recipes.recipe_name }}` from the data base added on a template after the `{% endfor %}`

@@ -151,8 +151,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("You'll never cook that again!")
-    return redirect(url_for("get_recipes"))
+    flash("You'll never cook this again!")
 
 
 if __name__ == "__main__":
