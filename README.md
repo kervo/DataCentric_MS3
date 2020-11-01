@@ -68,6 +68,17 @@ Loading the page for the first time and click on the *ME* link without starting 
 ### Problem: jinja2.exceptions.UndefinedError: 'get_flasehd_messages' is undefined
 * Solution: typo
 
+### Problem: jinja2.exceptions.UndefinedError: 'recipe' is undefined
+* Solution: Edit_recipe section was throwing this error, I had to link my edit function `recipe_id` with the actual collection on the data base `recipes`
+Wrong code:
+```html
+<a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}
+```
+Correction:
+```html
+<a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}
+```
+
 ### Defensive coding
 
 ```<input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>```

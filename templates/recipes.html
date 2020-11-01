@@ -7,7 +7,7 @@
             <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>{{ recipes.recipe_name }}
             </div>
             <div class="collapsible-body orange lighten-5">
-                <div class="col s8">
+                
                 <strong>Meal: {{ recipes.meal }}</strong>
                 <p>Country: {{ recipes.country }}</p>
                 <p>Preparation: {{ recipes.preparation }}</p>
@@ -16,16 +16,15 @@
                 <h5><i class="fas fa-leaf pink-text text-darken-4 tooltipped"
                 data-position="top" data-tooltip="I'm Vegetarian"></i></h5>
                 {% endif %}
-                </div>
-            <div class="col s4">
                 <a href="" class="btn-small lime accent-2 black-text">
                     <i class="fas fa-book-dead"></i> Kill this recipe
                 </a>
-                <a href="" class="btn-small pink darken-2">
+                <!---  recipe_id  link with the recipes collection and its _id  -->
+                <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}" class="btn-small pink darken-2">
                     <i class="fas fa-utensil-spoon"></i> Update
                 </a>
             </div>
-            </div>
+            
         </li>
         {% endfor %}
     </ul>

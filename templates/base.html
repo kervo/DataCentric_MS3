@@ -26,12 +26,12 @@
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger">
 					<i class="fas fa-hamburger"></i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-					<li><a href="{{ url_for('dashboard', username=session['user']) }}">Me</a></li>
-					<li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-					<li><a href="{{ url_for('logout') }}">Log Out</a></li>
-					<li><a href="{{ url_for('login') }}">Log In</a></li>
-					<li><a href="{{ url_for('register') }}">Register</a></li>
+					<li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-bullseye"></i> Home</a></li>
+					<li><a href="{{ url_for('dashboard', username=session['user']) }}"><i class="fas fa-child"></i> Me</a></li>
+					<li><a href="{{ url_for('add_recipe') }}"><i class="fas fa-burn"></i> Add Recipe</a></li>
+					<li><a href="{{ url_for('logout') }}"><i class="fas fa-door-closed"></i> Log Out</a></li>
+					<li><a href="{{ url_for('login') }}"><i class="fas fa-door-open"></i> Log In</a></li>
+					<li><a href="{{ url_for('register') }}"><i class="fas fa-circle-notch"></i> Register</a></li>
 				</ul>
 			</div>
 		</nav>
