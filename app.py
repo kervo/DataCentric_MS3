@@ -72,7 +72,7 @@ def login():
                         "dashboard", username=session["user"]))
             else:
                 # invalid information
-                flash("Wrong Ingredients")
+                flash("Wrong Login Ingredients!")
                 return redirect(url_for("login"))
 
         else:
@@ -85,12 +85,13 @@ def login():
 
 @app.route("/dashboard/<username>", methods=['GET', 'POST'])
 def dashboard(username):
+    recipes = list(mongo.db.recipes.find())
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     # Retrieves user's profile
     if session["user"]:
-        return render_template("dashboard.html", username=username)
+        return render_template("dashboard.html", recipes=recipes, username=username)
 
     if not session["user"]:
         return render_template('login.html')

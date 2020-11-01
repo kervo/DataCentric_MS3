@@ -35,14 +35,14 @@
     <!--   Ingredients     -->
       <div class="input-field col s12 m6">
         <i class="fas fa-pepper-hot pink-text text-darken-4 prefix"></i>
-        <textarea id="ingredients" name="ingredients" value="{{- recipe.ingredients -}}" minlength="10" maxlength="550" class="materialize-textarea validate" required></textarea>
+        <textarea id="ingredients" name="ingredients" minlength="10" maxlength="550" class="materialize-textarea validate" required>{{- recipe.ingredients -}}</textarea>
         <label for="ingredients">Ingredients</label>
       </div>
       <!--   Preparation     -->
       <div class="input-field col s12 m6">
         <i class="fas fa-fire pink-text text-darken-4 prefix"></i>
-        <textarea id="preparation" name="preparation" value="{{- recipe.preparation -}}" minlength="10" maxlength="550" class="materialize-textarea validate" required>
-        </textarea>
+        <textarea id="preparation" name="preparation" minlength="10" maxlength="550" class="materialize-textarea validate" required>{{- recipe.preparation -}}</textarea>
+        <!--   hyphen on this calling deletes white spaces on ingredients showing  -->
         <label for="preparation">Steps</label>
       </div>
     </div>

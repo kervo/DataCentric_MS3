@@ -6,6 +6,35 @@
                 <h3 class="center-align pink-text text-darken-4">
                 {{ username }}'s WonderChef
                 </h3>
+                <section>
+    <ul class="collapsible popout">
+    {% for recipes in recipes %}
+        <li>
+            <div class="collapsible-header pink darken-4 white-text"><i class="fas fa-concierge-bell prefix"></i>{{ recipes.recipe_name }}
+            </div>
+            <div class="collapsible-body orange lighten-5">
+                
+                <strong>Meal: {{ recipes.meal }}</strong>
+                <p>Country: {{ recipes.country }}</p>
+                <p>Preparation: {{ recipes.preparation }}</p>
+                <p><em>by: {{ recipes.wonderchef }}</em></p>
+                {% if recipes.vegetarian == "yes" %}
+                <h5><i class="fas fa-leaf pink-text text-darken-4 tooltipped"
+                data-position="top" data-tooltip="I'm Vegetarian"></i></h5>
+                {% endif %}
+                <a href="" class="btn-small lime accent-2 black-text">
+                    <i class="fas fa-book-dead"></i> Kill this recipe
+                </a>
+                <!---  recipe_id  link with the recipes collection and its _id  -->
+                <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}" class="btn-small pink darken-2">
+                    <i class="fas fa-utensil-spoon"></i> Update
+                </a>
+            </div>
+            
+        </li>
+        {% endfor %}
+    </ul>
+</section>
             </div>
         </div>
     </div>
