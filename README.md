@@ -5,7 +5,7 @@ Deployed project: https://wondercook-book.herokuapp.com/get_recipes
 # WonderCook Data Centric Milestone 3 Project
 
 # UX Practices
-<img src="https://github.com/kervo/DataCentric_MS3/static/img/wireframe-user stories.png" style="margin: 0;">
+![User Stories Wireframe](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/page-mochup.png)
 
 My colour scheme for Materialize: pink-text text-darken-4
 
@@ -19,6 +19,7 @@ In order to have a nice centred panel on *register.html* we need to use `<div cl
 `<i class="fas fa-key prefix"></i>` PREFIX class allows the fontawesone icon to be displayed as part of the text.
 
 # Software Development Practices:
+![User Stories Wireframe](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/wireframe-user%20stories.png)
 
 * The Structure
 
