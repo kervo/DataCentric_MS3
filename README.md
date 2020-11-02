@@ -1,4 +1,4 @@
-<img src="https://github.com/kervo/DataCentric_MS3/static/img/wondercook-frontpage.png" style="margin: 0;">
+![Final Front Page](https://github.com/kervo/DataCentric_MS3/static/img/wondercook-frontpage.png)
 
 Deployed project: https://wondercook-book.herokuapp.com/get_recipes
 
