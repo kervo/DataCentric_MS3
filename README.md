@@ -1,4 +1,5 @@
 ![Final Front Page](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/wondercook-frontpage.png)
+![Final Mobile Version](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/IMG_4347.PNG)
 
 Deployed project: https://wondercook-book.herokuapp.com/get_recipes
 
@@ -57,6 +58,10 @@ In order to add a nice margin around the content, on the base.html file is impor
 ```
 * The Categories
 The main problem at the moment is displaying the meal type on from the select list. I have it in MongoDB as an array, I think the best is to have them as different entries in a collection so the can have the same key value of "meal_time".
+
+* User Functionality
+![User Functions](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/IMG_4346.PNG)
+Only registered users can CRUD their on recipes, not registerted users are redirected to log in page.
 
 ### Handling errors
 Loading the page for the first time and click on the *ME* link without starting a session was throwing a 404 error, the best practice is to ask the users to log in.
