@@ -5,7 +5,7 @@ Deployed project: https://wondercook-book.herokuapp.com/get_recipes
 # WonderCook Data Centric Milestone 3 Project
 
 # UX Practices
-<img src="https://github.com/kervo/DataCentric_MS3/static/img/wireframe-user-stories.png" style="margin: 0;">
+<img src="https://github.com/kervo/DataCentric_MS3/static/img/wireframe-user stories.png" style="margin: 0;">
 
 My colour scheme for Materialize: pink-text text-darken-4
 
