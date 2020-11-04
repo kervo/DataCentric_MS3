@@ -1,9 +1,16 @@
+# WonderCook Data Centric Milestone 3 Project
+
+This project studies the interaction between users and handling data from front-end to back-end of websites.
+
+My project is a playground/boilerplate to understand how Python manages data in between the front-end and the back-end of websites. Python is a versatile and exciting language with a billion of sources, the Python library has been where I spend most of my time learning about how to do stuff depending on the users’ context and interaction.
+
+This is my begging connecting a database with a website, and how to show that information on a card or column on the front-end, as this project evolves, I want to use this process as my journey of the main core of the UX design practices. This is more like a studying messy room where I’m putting all my ideas together.
+
 ![Final Front Page](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/wondercook-frontpage.png)
 ![Final Mobile Version](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/IMG_4347.PNG)
 
 Deployed project: https://wondercook-book.herokuapp.com/get_recipes
 
-# WonderCook Data Centric Milestone 3 Project
 
 # UX Practices
 ![User Stories Wireframe](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/page-mochup.png)
@@ -18,6 +25,7 @@ In order to have a nice centred panel on *register.html* we need to use `<div cl
 
 * Using fontawesone icons:
 `<i class="fas fa-key prefix"></i>` PREFIX class allows the fontawesone icon to be displayed as part of the text.
+
 
 # Software Development Practices:
 ![User Stories Wireframe](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/wireframe-user%20stories.png)
@@ -62,6 +70,9 @@ The main problem at the moment is displaying the meal type on from the select li
 * User Functionality
 ![User Functions](https://github.com/kervo/DataCentric_MS3/blob/master/static/img/IMG_4346.PNG)
 Only registered users can CRUD their on recipes, not registerted users are redirected to log in page.
+
+Technologies used
+HTML, CSS, Javascript as part of the templates. Python3, Flask and MongoDB for the back-end.
 
 ### Handling errors
 Loading the page for the first time and click on the *ME* link without starting a session was throwing a 404 error, the best practice is to ask the users to log in.
