@@ -1,5 +1,7 @@
 # WonderCook Data Centric Milestone 3 Project
 
+Deployed project: https://wondercook-book.herokuapp.com/get_recipes
+
 This project studies the interaction between users and handling data from front-end to back-end of websites.
 
 My project is a playground/boilerplate to understand how Python manages data in between the front-end and the back-end of websites. Python is a versatile and exciting language with a billion of sources, the Python library has been where I spend most of my time learning about how to do stuff depending on the users’ context and interaction.
